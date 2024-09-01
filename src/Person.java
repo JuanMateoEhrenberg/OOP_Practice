@@ -1,19 +1,16 @@
 public class Person {
 
     //Attributes (objects characteristics)
-    String name;
-    String lastName;
-    int age;
-    Major major;
+    private String name;
+    private String lastName;
+    private int age;
     
     //Constructor
-    public Person(String name, String lastName, int age, String majorName, int duration, boolean isStudying){
-        major = new Major(majorName, duration, isStudying);
+    public Person(String name, String lastName, int age){
         this.name = name;
         this.lastName = lastName;
         this.age = age;
     }
-
     //Methods (Behaviour of an object)
     public String giveFullNameString(){
         return lastName + ", " + name;
@@ -22,6 +19,14 @@ public class Person {
     public String sayHiString(String greeted){
         if (age > 40) return "Estimado " + greeted + ", se encuentra optimo usted?";
         return "Hiya " + greeted + "! how are you?";
+    }
+
+    public int getEdad(){
+        return this.age;
+    }
+
+    public void setNombre(String name){
+        this.name = name;
     }
 }
 
