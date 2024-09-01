@@ -1,18 +1,15 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Practcing Basic concepts of Object Oriented Programming (OOP)
 
-## Folder Structure
+Abstraction
+Encapsulation
+Inheritance
+Polymorphism
 
-The workspace contains two folders by default, where:
+Learning how to make the bases in JAVA of:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Classes: "blueprint" for creating objects., Define properties and behaviours, Encapsuling data and functions reutilizing code.
+Att: Characteristics
+Methods: Code Block with an action or behaviour
+Objects:Especifi instance of a class that encapsules data and behaviour.
