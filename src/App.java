@@ -4,6 +4,7 @@ public class App {
         
         Person person1 = new Person("Rene", "Calle13", 45);
         person1.setNombre("Richard");
+        person1.setApellido("ALFONSO");
         
         String greeted = "Alejandro";
 

@@ -28,5 +28,9 @@ public class Person {
     public void setNombre(String name){
         this.name = name;
     }
+
+    public void setApellido(String lastName){
+        this.lastName = lastName;
+    }
 }
 
