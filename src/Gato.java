@@ -7,6 +7,7 @@ public class Gato extends Animal {
         super(name, age);
     }
 
+    //Decorator OVerride overwrites a method.
     @Override
     public String makeSound() {
         return "MIau" /*To be replaced with ACTUAL sound. */;

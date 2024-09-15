@@ -25,6 +25,7 @@ public class App {
         System.out.println("El perro llamado "+ dog.name + ", hace:");
         System.out.println(dog.makeSound());
         
+        System .err.println("El total de animales creados es: " + Animal.getAnimalsCuant());
 
 
 
