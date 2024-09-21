@@ -13,3 +13,12 @@ Learning how to make the bases in JAVA of:
 -Att: Characteristics
 -Methods: Code Block with an action or behaviour
 -Objects: Especific instance of a class that encapsules data and behaviour.
+
+Diferences between Interface/ Abstract Class
+
+Diferences between Collections and Arrays.
+
+Types of collections:
+-Set
+-List
+-Map
