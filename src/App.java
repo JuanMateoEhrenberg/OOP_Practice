@@ -1,53 +1,51 @@
-import java.util.LinkedList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        System.out.println("Bienvenidos a la fiesta de los superheroes");
+        System.out.println("Welcome to our vegetables Shop! :) ");
 
-        List<String> superHeroes = new LinkedList<>();
-        superHeroes.add("Batman");
-        superHeroes.add("Spiderman");
-        superHeroes.add("Superman");
-        superHeroes.add("Nightwing");
-        superHeroes.add("WonderWoman");
-        superHeroes.add("BlackCanary");
-        superHeroes.add("Robin");
-        superHeroes.add("Hulk");
-    
-        if (superHeroes.contains("Spiderman")){
-            System.out.println("Spiderman is in the party");
-        } 
+        Map<String, Double > inventory = new LinkedHashMap<>();
+        //HashMap does not respect order.
+        //TreeMap Ordered Alphabetically
+        //LinkedHAshMap Keeps order of putting.
 
-        System.out.println("A superhero is having the time of his life, the hero is: " + superHeroes.get(6));
-
-        superHeroes.set(5,"Dinah Lance");
-        System.err.println("Black canary takes her mask of, revealing her identity as: " + superHeroes.get(5));
-
-        superHeroes.remove(7);
-        if(!superHeroes.contains("Hulk")){
-            System.out.println("Hulk has left the party, he was drunk.");
-        }
-
-        if(superHeroes.isEmpty()){
-            System.out.println("Party ended, everyone left");
-        } else {
-            System.out.println("Party is still goin on, there are still " + superHeroes.size() + " superheroes.");
-        }
+        inventory.put("Banana", 0.89);
+        inventory.put("Tomate", 0.75);
+        inventory.put("Palta", 0.95);
+        inventory.put("Frutilla", 0.65);
+        inventory.put("Pimiento", 0.77);
         
-        System.out.println("Who is still in the party?");
-        for (String superHero : superHeroes) {
-            System.out.println(superHero);
-            //Not the same order as added. = HashSet
-            //Alfabetic order. = TreeSet
-            //Orderd the way they were added. = LinkedHashSet
+        System.out.println("This is our inventory of fruits and vegetables: ");
 
-            //Orderd the way they were added + duplicates = ArrayList
-            //Use of INDEXES to get/remove/Update etc items. Very efficient ofr get/set
-            //LinkedList makes it easier for iteration.
-            //Vector the same, but for multithread. (Research on my own when better knowledge myself.)
+        //KeySet give me an array with the keys.
+        for (String fruta : inventory.keySet()){
+                                                //which I can later use to get the corresponding value
+            System.out.println(fruta + ": $" + inventory.get(fruta));
         }
 
-    }
+        String frutaBuscada = "Frutilla";
+        System.out.println("A client comes and asks for the next fruit: " + frutaBuscada );
+
+        if(inventory.containsKey(frutaBuscada)){
+            System.out.println(frutaBuscada + " esta en el inventario, gusto venderle");
+        } else {
+            System.err.println("Sorry, we are do not have a sigle  " + frutaBuscada );
+        }
+
+
+        String sinStock = "Frutilla";
+        inventory.remove(sinStock);
+        System.out.println("We are now out of: " + sinStock);
+
+        System.out.println("inventary updated: ");
+        for(String string : inventory.keySet()) {
+            System.out.println(string + ": $" + inventory.get(string));
+        }
+
+        System.out.println("the new quantity of stock is: " + inventory.size());
+
+
+    }   
 }
